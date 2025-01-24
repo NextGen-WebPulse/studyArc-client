@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        inter: ["Inter", "serif"],
+        fontOutfit: ["Outfit", "serif"],
       },
       colors: {
         primary: {
@@ -21,6 +21,9 @@ export default {
           900: "#081947",
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+        },
+        additional: {
+          500: "rgb(3, 31, 66)",
         },
         customGray: {
           DEFAULT: "#85878c", // Original color

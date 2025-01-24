@@ -3,7 +3,7 @@ import Navbar from "../pages/Shared/Navbar/Navbar";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="min-h-dvh">
       <Navbar />
       <Outlet />
     </div>
