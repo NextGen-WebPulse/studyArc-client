@@ -70,3 +70,13 @@
     @apply bg-background text-foreground font-fontOutfit;
   }
 }
+
+@layer utilities {
+  .container-responsive {
+    @apply mx-auto w-[90%] max-w-[1400px];
+  }
+
+  .transition {
+    @apply transition-all duration-500
+  }
+}

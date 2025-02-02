@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import bannerImage from "../../assets/images/bannerHuman.png";
+import bannerImage from "../../assets/images/HomePageImages/bannerHuman.png";
 import { ArrowRight } from "lucide-react";
 
 const Banner = () => {
   return (
-    <div className="mx-auto mt-2 flex w-[90%] max-w-[1400px] items-center justify-between">
+    <div className="container-responsive mt-2 flex items-center justify-between">
       {/* text section  */}
       <section>
         <BannerText />

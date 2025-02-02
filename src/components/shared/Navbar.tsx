@@ -30,8 +30,8 @@ const navItems: TNavItems[] = [
 ];
 
 const Logo = () => (
-  <div className="font-fontOutfit text-3xl font-bold">
-    Study<span className="font-normal">Arc</span>
+  <div className="font-fontOutfit text-4xl font-medium">
+    Study<span className="font-light">Arc</span>
   </div>
 );
 
