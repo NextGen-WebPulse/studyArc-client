@@ -30,8 +30,8 @@ const navItems: TNavItems[] = [
 ];
 
 const Logo = () => (
-  <div className="font-inter text-3xl font-bold">
-    Study<span className="font-normal">Arc</span>
+  <div className="font-fontOutfit text-4xl font-medium">
+    Study<span className="font-light">Arc</span>
   </div>
 );
 
@@ -45,14 +45,14 @@ import { Search } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <div className="flex h-12 items-center bg-primary-300/30 backdrop-blur-lg">
-      <div className="my-auto flex w-full shrink-0 items-center justify-between">
+    <div className="sticky top-0 flex items-center bg-primary-50/20 bg-white">
+      <div className="mx-auto flex w-[95%] shrink-0 items-center justify-between py-4 backdrop-blur-lg">
         {/* logo  */}
         <Logo />
         {/* section */}
         <div className="flex gap-4">
-          <nav className="capitalize">
-            <ul className="text-customGray-darker flex h-full items-center gap-4 font-semibold">
+          <nav className="hidden capitalize md:block">
+            <ul className="flex h-full items-center gap-4 font-semibold text-customGray-darker">
               {navItems.map((item) => (
                 <NavItem key={item.id} title={item.title} href={item.href} />
               ))}
@@ -60,7 +60,9 @@ const Navbar = () => {
           </nav>
           {/* profile section  */}
           <div className="flex items-center gap-4">
-            <Search />
+            <button aria-label="search">
+              <Search /> {/* icon */}
+            </button>
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>
