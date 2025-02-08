@@ -1,3 +1,4 @@
+import OurCourses from "@/components/home/OurCourses";
 import Banner from "../components/home/Banner";
 import Categories from "../components/home/Categories";
 
@@ -9,6 +10,7 @@ const Home = () => {
       </div>
       <div className="container-responsive mt-8">
         <Categories />
+        <OurCourses />
       </div>
     </>
   );
