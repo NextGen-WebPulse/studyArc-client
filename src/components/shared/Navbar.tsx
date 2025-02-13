@@ -10,7 +10,7 @@ const navItems: TNavItems[] = [
   {
     id: 1,
     title: "home",
-    href: "#",
+    href: "/",
   },
   {
     id: 2,
