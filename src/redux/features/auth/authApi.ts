@@ -1,11 +1,12 @@
 import { baseApi } from "@/redux/api/baseApi";
-import { TRegisterSchema } from "@/types/formTypes";
+import { TLoginSchema, TRegisterSchema } from "@/types/formTypes";
 
 const apiSlice = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     getUsers: builder.query({
       query: () => "/user",
     }),
+
     createUser: builder.mutation<any, TRegisterSchema>({
       query: (formData) => ({
         url: "/user/create",
@@ -13,7 +14,16 @@ const apiSlice = baseApi.injectEndpoints({
         body: formData,
       }),
     }),
+
+    loginUser: builder.mutation<any, TLoginSchema>({
+      query: (formData) => ({
+        url: "/auth/login",
+        method: "POST",
+        body: formData,
+      }),
+    }),
   }),
 });
 
-export const { useGetUsersQuery, useCreateUserMutation } = apiSlice;
+export const { useGetUsersQuery, useCreateUserMutation, useLoginUserMutation } =
+  apiSlice;

@@ -1,10 +1,10 @@
-import { TRegisterInputs } from "@/constants/formInput";
+import { TLoginInputs, TRegisterInputs } from "@/constants/formInput";
 import { FormControl, FormField, FormItem, FormMessage } from "./ui/form";
 import { Input } from "./ui/input";
 import React from "react";
 
 type CustomFormFieldProps = {
-  input: TRegisterInputs;
+  input: TRegisterInputs | TLoginInputs;
   form: any;
 };
 

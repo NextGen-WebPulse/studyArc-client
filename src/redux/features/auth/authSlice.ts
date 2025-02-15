@@ -1,18 +1,29 @@
+import { getLocalStorageItem, setLocalStorage } from "@/utils/localStorage";
 import { createSlice } from "@reduxjs/toolkit";
-interface IUserState {
-  user: object;
-  token: string;
+
+interface IUserInitState {
+  token: string | null;
 }
 
-const initialState: IUserState = {
-  user: {},
-  token: "",
+const initialState: IUserInitState = {
+  token: getLocalStorageItem("token"),
 };
 
 const authSlice = createSlice({
   name: "auth",
   initialState,
-  reducers: {},
+  reducers: {
+    setCredential: (state, action) => {
+      state.token = action.payload.accessToken;
+
+      setLocalStorage("token", action.payload.accessToken);
+    },
+
+    clearCredential: (state) => {
+      (state.token = null), window.localStorage.removeItem("token");
+    },
+  },
 });
 
+export const { setCredential } = authSlice.actions;
 export default authSlice.reducer;
