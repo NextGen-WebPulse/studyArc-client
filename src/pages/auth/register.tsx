@@ -12,7 +12,7 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 export default function Register() {
-  const [createUser] = useCreateUserMutation();
+  const [createUser, { isLoading }] = useCreateUserMutation();
 
   const navigate = useNavigate();
 
@@ -63,10 +63,11 @@ export default function Register() {
             ),
           )}
           <Button
+            disabled={isLoading}
             type="submit"
             className="w-full rounded-full bg-primary-500 py-5 text-lg hover:bg-primary-600"
           >
-            Signup
+            {isLoading ? "Signing up..." : "Signup"}
           </Button>
         </form>
       </Form>
