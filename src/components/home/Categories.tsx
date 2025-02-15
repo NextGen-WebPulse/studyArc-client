@@ -1,4 +1,4 @@
-import CustomCard from "./CustomCard";
+import CategoryCard from "./CategoryCard";
 import CategoryImage from "../../assets/images/HomePageImages/categories-image.webp";
 
 interface ICardContent {
@@ -61,25 +61,25 @@ const cardContent: ICardContent[] = [
 
 export default function Categories() {
   return (
-    <div className="capitalize">
-      <section className="py-8 text-center text-primary-500">
+    <section className="capitalize">
+      <div className="py-8 text-center text-primary-500">
         <h1 className="text-xl">top categories</h1>
         <h2 className="text-5xl font-medium">
           <span className="text-additional-500">Most demanding </span>Categories
           <span className="text-additional-500">.</span>
         </h2>
-      </section>
+      </div>
 
-      <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {cardContent.map((item) => (
-          <CustomCard
+          <CategoryCard
             key={item.id}
             title={item.title}
             description={item.description}
             image={item.image}
           />
         ))}
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

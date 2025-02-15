@@ -13,7 +13,7 @@ interface CardProps {
   image: string;
 }
 
-export default function CustomCard({ title, description, image }: CardProps) {
+export default function CategoryCard({ title, description, image }: CardProps) {
   return (
     <>
       <Card className="cursor-pointer transition hover:-translate-y-1 hover:border-primary-300">
